@@ -1,0 +1,92 @@
+<h1>Kontrol Detayları</h1>
+<a class="backButton" href="/kontroller/hepsi">Geri</a>
+<hr />
+
+<h2>Kontrol detaylarını düzenle</h2>
+
+<div class="formWrapper">
+  <form id="kontrolDüzenle" action="/api/kontroller" method="PUT">
+    <input type="hidden" name="_method" value="PUT"/>
+    <div class="formError"></div>
+    <div class="formSuccess">Your Changes Have Been Saved</div>
+    <input class="hiddenIdInput"  type="hidden" name="uid" />
+
+    <div class="inputWrapper">
+      <div class="inputLabel">Kontrol Kimliği</div>
+      <input class="disabled displayIdInput" type="text" name="displayId" disabled />
+    </div>
+
+    <div class="inputWrapper">
+      <div class="inputLabel">Kontrol Durumu</div>
+      <input class="disabled displayStateInput" type="text" name="displayState" disabled />
+    </div>
+
+    <div class="inputWrapper">
+      <div class="inputLabel">Protokol</div>
+      <select class="protocolInput" name="protokol">
+        <option value="http">http://</option>
+        <option value="https">https://</option>
+      </select>
+    </div>
+
+    <div class="inputWrapper">
+      <div class="inputLabel">URL (Protokol'ü içermemeli)</div>
+      <input  class="urlInput" type="text" name="url" placeholder="mywebsite.com/my/path" />
+    </div>
+
+    <div class="inputWrapper">
+      <div class="inputLabel">Başarı Kodları (Sitenin aktif olduğunu gösteren HTTP kodları)</div>
+      <div class="checkboxGroup">
+        <input type="checkbox" class="successCodesInput multiselect intval" name="başarıKodları" value="200">200
+        <input type="checkbox" class="successCodesInput multiselect intval" name="başarıKodları" value="201">201
+        <input type="checkbox" class="successCodesInput multiselect intval" name="başarıKodları" value="301">301
+        <input type="checkbox" class="successCodesInput multiselect intval" name="başarıKodları" value="302">302
+        <input type="checkbox" class="successCodesInput multiselect intval" name="başarıKodları" value="400">400
+        <input type="checkbox" class="successCodesInput multiselect intval" name="başarıKodları" value="403">403
+        <input type="checkbox" class="successCodesInput multiselect intval" name="başarıKodları" value="404">404
+        <input type="checkbox" class="successCodesInput multiselect intval" name="başarıKodları" value="406">406
+        <input type="checkbox" class="successCodesInput multiselect intval" name="başarıKodları" value="500">500
+      </div>
+    </div>
+
+    <div class="inputWrapper">
+      <div class="inputLabel">HTTP Metot</div>
+      <select  class="methodInput" name="httpMethod">
+        <option value="post">POST</option>
+        <option value="get">GET</option>
+        <option value="put">PUT</option>
+        <option value="delete">DELETE</option>
+      </select>
+    </div>
+
+    <div class="inputWrapper">
+      <div class="inputLabel">Zaman Aşımı</div>
+      <select class="timeoutInput intval" name="zamanAşımı">
+        <option value="1">1 second</option>
+        <option value="2">2 seconds</option>
+        <option value="3">3 seconds</option>
+        <option value="4">4 seconds</option>
+        <option value="5">5 seconds</option>
+      </select>
+    </div>
+
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Save Changes</button>
+    </div>
+  </form>
+</div>
+
+
+<hr />
+<h2>Kontrolü Sil</h2>
+<div class="formWrapper">
+  <form id="kontrolSil" action="/api/kontroller" method="DELETE">
+    <input type="hidden" name="_method" value="DELETE"/>
+    <div class="formError"></div>
+    <div class="warning">Dikkat: Bu işlem geri alınamaz, yanlışlıkla basmadığınızdan emin olun!</div>
+    <input class="hiddenIdInput" type="hidden" name="uid" />
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta red">Kontrolü Sil</button>
+    </div>
+  </form>
+</div>

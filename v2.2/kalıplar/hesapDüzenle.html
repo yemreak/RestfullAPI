@@ -1,0 +1,47 @@
+<h1>Hesap Ayarları</h1>
+
+<hr />
+
+<h2>Hesap ayrıntılarını düzenle</h2>
+
+<div class="formWrapper">
+    <form id="hesapDüzenleKimlik" action="/api/kullanicilar" method="PUT">
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="formError"></div>
+        <div class="formSuccess">Değişiklikler başarıyla kayıt edildi :)</div>
+        <input class="hiddenPhoneNumberInput" type="hidden" name="telefonNo" />
+        <div class="inputWrapper">
+            <div class="inputLabel">Telefon No</div>
+            <input class="disabled displayPhoneInput" type="text" name="displayPhone" disabled />
+        </div>
+        <div class="inputWrapper">
+            <div class="inputLabel">İsim</div>
+            <input class="firstNameInput" type="text" name="isim" placeholder="Yunus" />
+        </div>
+        <div class="inputWrapper">
+            <div class="inputLabel">Soyisim</div>
+            <input class="lastNameInput" type="text" name="soyİsim" placeholder="Emre" />
+        </div>
+        <div class="inputWrapper ctaWrapper">
+            <button type="submit" class="cta green">Değişiklikleri Kaydet</button>
+        </div>
+    </form>
+</div>
+
+<hr />
+<h2>Şifreni Değiştir</h2>
+<div class="formWrapper">
+    <form id="hesapDüzenleŞifre" action="/api/kullanicilar" method="PUT">
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="formError"></div>
+        <div class="formSuccess">Şifren başarıyla güncellendi :)</div>
+        <input class="hiddenPhoneNumberInput" type="hidden" name="telefonNo" />
+        <div class="inputWrapper">
+            <div class="inputLabel">Yeni şifreyi belirle</div>
+            <input type="password" name="şifre" placeholder="Güzel bir şifre olsun :)" />
+        </div>
+        <div class="inputWrapper ctaWrapper">
+            <button type="submit" class="cta green">Şifreyi güncelle</button>
+        </div>
+    </form>
+</div>

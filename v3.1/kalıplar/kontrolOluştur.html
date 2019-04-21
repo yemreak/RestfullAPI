@@ -1,0 +1,63 @@
+<h1>Kontrol - Oluştur</h1>
+<h2>Kontrollerin her dakikada sadece 1 kez çalışacaktır</h2>
+<a class="backButton" href="/kontroller/hepsi">Geri</a>
+<hr />
+
+
+<div class="formWrapper">
+  <form id="kontrolOluştur" action="/api/kontroller" method="POST">
+    <div class="formError"></div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Protokol</div>
+      <select name="protokol">
+        <option value="http" selected>http://</option>
+        <option value="https">https://</option>
+      </select>
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">URL (protokolu içermemeli)</div>
+      <input type="text" name="url" placeholder="mywebsite.com/my/path" />
+    </div>
+
+    <div class="inputWrapper">
+      <div class="inputLabel">Başarı Kodları (Sitenin aktif olduğunu gösteren HTTP kodları)</div>
+      <div class="checkboxGroup">
+        <input type="checkbox" class="multiselect intval" name="başarıKodları" value="200" checked>200
+        <input type="checkbox" class="multiselect intval" name="başarıKodları" value="201" checked>201
+        <input type="checkbox" class="multiselect intval" name="başarıKodları" value="301">301
+        <input type="checkbox" class="multiselect intval" name="başarıKodları" value="302">302
+        <input type="checkbox" class="multiselect intval" name="başarıKodları" value="400">400
+        <input type="checkbox" class="multiselect intval" name="başarıKodları" value="403">403
+        <input type="checkbox" class="multiselect intval" name="başarıKodları" value="404">404
+        <input type="checkbox" class="multiselect intval" name="başarıKodları" value="406">406
+        <input type="checkbox" class="multiselect intval" name="başarıKodları" value="500">500
+      </div>
+    </div>
+
+
+    <div class="inputWrapper">
+      <div class="inputLabel">HTTP Metot</div>
+      <select name="httpMetot">
+        <option value="post">POST</option>
+        <option value="get" selected>GET</option>
+        <option value="put">PUT</option>
+        <option value="delete">DELETE</option>
+      </select>
+    </div>
+
+    <div class="inputWrapper">
+      <div class="inputLabel">Zaman Aşımı</div>
+      <select class="intval" name="zamanAşımı">
+        <option value="1">1 saniye</option>
+        <option value="2">2 saniye</option>
+        <option value="3">3 saniye</option>
+        <option value="4">4 saniye</option>
+        <option value="5">5 saniye</option>
+      </select>
+    </div>
+
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Kontrol Oluştur</button>
+    </div>
+  </form>
+</div>

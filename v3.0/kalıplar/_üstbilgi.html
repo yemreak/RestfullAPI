@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <!-- Genel ayarlar -->
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="tr">
+  <base href="{evrensel.anaUrl}" />
+
+  <!-- Site içeriği hakkında bilgi (meta tag) -->
+  <title> {başlık.konu} | {evrensel.uygulamaİsmi} </title>
+  <meta name="description" content="{başlık.açıklama}">
+
+  <!-- Statik kaynaklar -->
+  <link type="image/x-icon" rel="icon" href="sekme-ikonu.ico">
+  <script type="text/javascript" charset="utf-8" src="genel/uygulama.js"></script>
+  <link rel="stylesheet" type="text/css" href="genel/uygulama.css" />
+
+</head>
+
+<body class="{vücut.sınıf}">
+  <!-- Sayfa kapsayıcısı (Altbilgi.html'de kapatılır.)-->
+  <div class="kapsayıcı">
+    <!-- Üst Bilgi -->
+    <div class="üstbilgi">
+      <!-- Logo -->
+      <a class="logo" href="/">
+        <img src="genel/logo.png" alt="Logo">
+      </a>
+
+      <!-- Yönlendirme -->
+      <ul class="menu">
+        <li>
+          <a href="/">Ana sayfa</a>
+        </li>
+        <li class="loggedOut">
+          <a href="/hesap/olustur">Kayıt Ol</a>
+        </li>
+        <li class="loggedOut">
+          <a href="/oturum/olustur">Giriş Yap</a>
+        </li>
+        <li class="loggedIn">
+          <a href="/kontroller/hepsi">Panelim</a>
+        </li>
+        <li class="loggedIn">
+          <a href="/hesap/duzenle">Hesap Ayarları</a>
+        </li>
+        <li class="loggedIn">
+          <a href="/oturum/sil" id="logoutButton">Çıkış Yap</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sayfanın içeriği (Altbilgi.html'de kapatılır.-->
+    <div class="içerik">

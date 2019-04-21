@@ -1,0 +1,21 @@
+{
+  "name": "v2.0",
+  "version": "1.0.0",
+  "description": "---------",
+  "main": "indeks.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node komutlar/derleme",
+    "build": "mkdir dağıtım & babel indeks.js kütüphane/* kütüphane/işleyiciler/* -s -d dağıtım",
+    "clean": "rd /s /q dağıtım",
+    "rebuild": "npm run clean & npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "babel-register": "^6.26.0"
+  }
+}
